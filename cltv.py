@@ -1,5 +1,5 @@
 ReadMe
-- The project directory is: 'C:/Users/huang/Downloads/HUB-Group2/'
+- The project directory is: 'C:/Users/sachin/Downloads/HUB-Group2/'
 - Use the original data sets, 'Policy Data.xlsx' and 'Lead Data.xlsx'
 - Contents
 - Part 1 - Data Cleaning for Visualization and Business Understanding
@@ -28,7 +28,7 @@ from sklearn.model_selection import RandomizedSearchCV
 
 Read policy data as policydf
 # Read policy data as policydf
-project_dir = 'C:/Users/huang/Downloads/HUB-Group2/'
+project_dir = 'C:/Users/sachin/Downloads/HUB-Group2/'
 policydf = pd.read_excel(project_dir+'Policy Data.xlsx', sheet_name='policy')
 
 Map each postal into Province
@@ -212,7 +212,7 @@ cutoff = policydf['CustomerLTV'].quantile(0.8)
 policydf['Class'] = np.where(policydf['CustomerLTV'] > cutoff, 'ClassA', 'Others')
 
 Export the cleaned dataset
-policydf.to_csv('C:/Users/huang/Downloads/HUB-Group2/policydf.csv', index=False)
+policydf.to_csv('C:/Users/sachin/Downloads/HUB-Group2/policydf.csv', index=False)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -220,7 +220,7 @@ Part 2 - Data Cleaning for Modeling
 
 Read policy data as policydf
 # Read policy data as policydf
-project_dir = 'C:/Users/huang/Downloads/HUB-Group2/'
+project_dir = 'C:/Users/sachin/Downloads/HUB-Group2/'
 policydf = pd.read_excel(project_dir+'Policy Data.xlsx', sheet_name='policy')
 
 Map each postal into Province
@@ -739,5 +739,5 @@ result = result.sort_values(by='Prediction', ascending=False)
 result
 class_count = result['Prediction'].value_counts()
 print(class_count)
-result.to_csv('C:/Users/huang/Downloads/HUB-Group2/result.csv', index=False)
+result.to_csv('C:/Users/sachin/Downloads/HUB-Group2/result.csv', index=False)
  
